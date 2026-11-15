@@ -77,7 +77,7 @@ function majResultat() {
   $("#resultat").hidden = false;
 }
 
-// Capot ouvert : matrice
+// Comment ça calcule : matrice
 const entete = `<thead><tr><th>Côté choisi</th>${POSTES.map((p) => `<th title="${p.nom}">${p.id}</th>`).join("")}</tr></thead>`;
 const lignes = [];
 DILEMMES.forEach((paire, d) => {

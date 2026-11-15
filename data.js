@@ -146,7 +146,7 @@ export const QUIZ = [
 export const ANCRAGE = [
   { question: "Dans le plan en 4 cases, « ce qui peut me bloquer » se cherche d’abord…", choix: ["dans le marché du travail", "chez moi", "chez les autres"], bonne: 1 },
   { question: "Les patients de Damasio, privés d’émotions en décidant…", choix: ["décidaient plus vite", "n’arrivaient plus à choisir", "devenaient plus intelligents"], bonne: 1 },
-  { question: "Dans le virage, le motard regarde…", choix: ["l’arbre", "la sortie du virage", "son compteur"], bonne: 1 },
+  { question: "Rêver seulement du résultat (le stage, le diplôme)…", choix: ["fait agir davantage", "fait moins agir", "ne change rien"], bonne: 1 },
 ];
 
 export const SONDAGE_MODELE = { question: "Le modèle a-t-il raison pour vous ?", choix: ["Oui", "En partie", "Non"] };
