@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>R1.12 PPP · Des dilemmes aux postes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Domine:wght@500;700&family=Nunito+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <p class="surtitre">BUT informatique · R1.12 · Séance 2</p>
+    <h1>Des dilemmes aux postes</h1>
+    <nav>
+      <a href="#dilemmes">Mes 8 dilemmes</a>
+      <a href="#capot">Capot ouvert</a>
+      <a href="#postes">Les postes</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="dilemmes">
+      <h2>Mes 8 dilemmes</h2>
+      <p>Refaites vos choix de la séance 1. Plutôt… ou… ?</p>
+      <ol id="liste-dilemmes" class="dilemmes"></ol>
+
+      <div class="octet">
+        <span class="etiquette">Votre octet</span>
+        <code id="octet">········</code>
+      </div>
+
+      <div id="resultat" hidden>
+        <h3>Votre top 3</h3>
+        <p id="hesite" class="hesite" hidden></p>
+        <div id="top" class="top"></div>
+        <h3>Les 8 scores</h3>
+        <div id="barres" class="barres"></div>
+      </div>
+
+      <aside class="avertissement">
+        <p><strong>Modèle simplifié : 8 questions ne décident pas d’un métier.</strong> Où se trompe-t-il pour vous ?</p>
+        <p>Rien n’est envoyé : tout se calcule sur votre appareil.</p>
+      </aside>
+    </section>
+
+    <section id="capot">
+      <h2>Capot ouvert</h2>
+      <p>Chaque côté d’un dilemme donne des points à certains postes. Le score d’un poste est la somme des points des côtés que vous avez choisis : un produit vecteur × matrice.</p>
+      <div class="tableau-defilant"><table id="matrice"></table></div>
+      <h3>Le code qui calcule</h3>
+      <pre id="code"></pre>
+    </section>
+
+    <section id="postes">
+      <h2>Les postes</h2>
+      <h3>La chaîne</h3>
+      <div id="chaine" class="chaine"></div>
+      <div id="fiches" class="fiches"></div>
+    </section>
+  </main>
+
+  <footer>
+    <a href="./fiche-de-route.docx" download>Fiche de route (à télécharger)</a>
+  </footer>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

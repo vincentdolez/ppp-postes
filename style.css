@@ -1,0 +1,159 @@
+:root {
+  --fond: #F5F1E8;
+  --nuit: #1F2A36;
+  --orange: #B4501F;
+  --peche: #F0A06A;
+  --carte: #FBF8F2;
+  --trait: #DDD5C5;
+  --gris: #4A5361;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--fond);
+  color: var(--nuit);
+  font: 17px/1.5 "Nunito Sans", system-ui, sans-serif;
+}
+
+h1, h2, h3, h4 { font-family: "Domine", Georgia, serif; line-height: 1.2; }
+
+header {
+  background: var(--nuit);
+  color: var(--fond);
+  padding: 1.5rem 1.25rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+header h1 { margin: .2rem 0 .8rem; font-size: 1.6rem; }
+.surtitre {
+  margin: 0;
+  color: var(--peche);
+  font-size: .75rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+nav { display: flex; gap: .25rem; overflow-x: auto; }
+nav a {
+  color: var(--fond);
+  text-decoration: none;
+  padding: .55rem .8rem;
+  border-bottom: 3px solid transparent;
+  white-space: nowrap;
+  font-weight: 700;
+}
+nav a:hover, nav a:focus { border-bottom-color: var(--orange); }
+
+main { max-width: 960px; margin: 0 auto; padding: 0 1.25rem; }
+section { padding: 2rem 0; border-bottom: 1px solid var(--trait); scroll-margin-top: 8rem; }
+section h2 { font-size: 1.6rem; margin-top: 0; }
+
+/* Dilemmes */
+.dilemmes { list-style: none; padding: 0; margin: 0; display: grid; gap: .75rem; }
+.dilemmes li { background: var(--carte); border: 1px solid var(--trait); border-radius: 10px; padding: .6rem; }
+.num { display: block; font-size: .75rem; font-weight: 800; color: var(--orange); letter-spacing: .06em; margin: 0 0 .4rem .2rem; }
+.choix { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: .5rem; }
+.choix button {
+  font: inherit;
+  font-weight: 700;
+  min-height: 3.4rem;
+  padding: .6rem;
+  border-radius: 8px;
+  border: 2px solid var(--nuit);
+  background: transparent;
+  color: var(--nuit);
+  cursor: pointer;
+}
+.choix button.droite { border-color: var(--orange); color: var(--orange); }
+.choix button.gauche.actif { background: var(--nuit); color: var(--fond); }
+.choix button.droite.actif { background: var(--orange); color: var(--fond); }
+.ou {
+  background: var(--fond);
+  border: 1px solid var(--trait);
+  border-radius: 999px;
+  padding: .15rem .5rem;
+  font-size: .85rem;
+  font-weight: 700;
+}
+
+.octet { margin: 1.25rem 0; display: flex; align-items: baseline; gap: .75rem; flex-wrap: wrap; }
+.etiquette { font-weight: 800; text-transform: uppercase; font-size: .8rem; letter-spacing: .06em; color: var(--orange); }
+.octet code { font-size: 2rem; letter-spacing: .3em; background: var(--nuit); color: var(--peche); padding: .2rem .6rem; border-radius: 6px; }
+
+.hesite { background: var(--peche); padding: .6rem .8rem; border-radius: 8px; font-weight: 700; }
+.top { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: .75rem; }
+.carte { background: var(--nuit); color: var(--fond); border-radius: 10px; padding: 1rem; }
+.carte h4 { margin: 0 0 .25rem; font-size: 1.2rem; color: var(--peche); }
+.carte .score { margin: 0 0 .5rem; font-size: .85rem; font-weight: 700; }
+.raisons-titre { margin-bottom: .2rem; font-size: .85rem; font-weight: 700; }
+.raisons { margin: 0; padding-left: 1.1rem; font-size: .9rem; }
+.raisons b { color: var(--peche); }
+
+.barres { display: grid; gap: .35rem; }
+.barre { display: grid; grid-template-columns: minmax(8rem, 14rem) 1fr 2rem; gap: .5rem; align-items: center; font-size: .9rem; }
+.piste { background: var(--trait); height: .9rem; border-radius: 999px; overflow: hidden; }
+.piste span { display: block; height: 100%; background: var(--gris); }
+.barre.haut .piste span { background: var(--orange); }
+.barre.haut .nom { font-weight: 800; }
+.val { text-align: right; font-weight: 700; }
+
+.avertissement { margin-top: 1.5rem; border-left: 4px solid var(--orange); padding: .25rem 1rem; background: var(--carte); }
+
+/* Capot */
+.tableau-defilant { overflow-x: auto; }
+table { border-collapse: collapse; font-size: .9rem; width: 100%; background: var(--carte); }
+th, td { border: 1px solid var(--trait); padding: .35rem .5rem; }
+thead th { background: var(--nuit); color: var(--fond); }
+tbody th { text-align: left; font-weight: 400; white-space: nowrap; }
+td { text-align: center; font-weight: 800; min-width: 2.6rem; }
+td.fort { background: var(--orange); color: var(--fond); }
+td.leger { background: var(--peche); }
+tr.fin th, tr.fin td { border-bottom: 2px solid var(--nuit); }
+pre {
+  background: var(--nuit);
+  color: var(--fond);
+  padding: 1rem;
+  border-radius: 10px;
+  overflow-x: auto;
+  font-size: .85rem;
+  line-height: 1.45;
+}
+
+/* Postes */
+.maillons { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem; counter-reset: m; }
+.maillons li {
+  counter-increment: m;
+  flex: 1 1 9rem;
+  background: var(--carte);
+  border: 1px solid var(--trait);
+  border-top: 4px solid var(--orange);
+  border-radius: 8px;
+  padding: .5rem .6rem;
+}
+.maillons li b::before { content: counter(m) ". "; color: var(--orange); }
+.maillons li span { display: block; font-size: .85rem; color: var(--gris); }
+.transverse { background: var(--nuit); color: var(--fond); padding: .6rem .8rem; border-radius: 8px; }
+.transverse b { color: var(--peche); }
+
+.fiches { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+.fiche { background: var(--carte); border: 1px solid var(--trait); border-radius: 10px; padding: 1rem; }
+.fiche h3 { margin: .1rem 0 .4rem; }
+.maillon { margin: 0; font-size: .75rem; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: var(--orange); }
+.mission { font-weight: 700; }
+dl { margin: 0; font-size: .92rem; }
+dt { font-weight: 800; margin-top: .5rem; color: var(--orange); }
+dd { margin: 0; }
+
+footer { text-align: center; padding: 2rem 1rem 3rem; }
+footer a { color: var(--orange); font-weight: 800; }
+
+@media (max-width: 560px) {
+  body { font-size: 16px; }
+  .choix button { min-height: 3rem; font-size: .95rem; }
+  .octet code { font-size: 1.5rem; }
+  .barre { grid-template-columns: 7.5rem 1fr 1.6rem; font-size: .8rem; }
+  header { position: static; }
+}
