@@ -45,7 +45,7 @@ function majResultat() {
   const top = classement.filter((p) => p.score >= seuil);
   const hesite = $("#hesite");
   hesite.hidden = top.length <= 3;
-  hesite.textContent = `Le modèle hésite : ${top.length} postes sont ex æquo pour les premières places.`;
+  hesite.textContent = `Le modèle hésite : ${top.length} postes se partagent les 3 premières places (ex æquo).`;
 
   $("#top").innerHTML = top
     .map((p) => {
