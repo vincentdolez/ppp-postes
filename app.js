@@ -1,4 +1,5 @@
 import { DILEMMES, MAILLONS, POSTES, MATRICE, orienter } from "./data.js";
+import { D8, SECTEURS, EMPLOYEURS, PHRASE_S3, PHRASES } from "./secteurs.js";
 
 const $ = (sel) => document.querySelector(sel);
 const nomPoste = Object.fromEntries(POSTES.map((p) => [p.id, p.nom]));
@@ -119,4 +120,30 @@ $("#fiches").innerHTML = POSTES.map(
       <dt>Y accéder</dt><dd>${p.acces}</dd>
     </dl>
   </article>`
+).join("");
+
+// Secteurs
+const phrase = (morceaux) => morceaux.map((m, i) => (i % 2 ? `<b>${m}</b>` : m)).join("");
+$("#phrase-modele").innerHTML = phrase(PHRASE_S3.modele);
+$("#phrase-exemple").innerHTML = `<span class="etiquette">Exemple</span> ${phrase(PHRASE_S3.exemple)}`;
+$("#d8").innerHTML = D8.map((id) => `<li>${nomPoste[id]}</li>`).join("");
+
+if (PHRASES.length) {
+  $("#liste-phrases").innerHTML = PHRASES.map(
+    (p) => `<li><span class="maillon">Groupe ${p.classe} · ${p.secteur} · ${nomPoste[p.poste]}</span>${p.texte}</li>`
+  ).join("");
+  $("#vos-phrases").hidden = false;
+}
+
+$("#employeurs").innerHTML = EMPLOYEURS.map(
+  (e) => `<article class="fiche">
+    <p class="maillon">${e.long}</p>
+    <h3>${e.nom}</h3>
+    <p class="mission">${e.quoi}</p>
+    <dl><dt>Exemples</dt><dd>${e.exemples}</dd><dt>Pour vous</dt><dd>${e.pour}</dd></dl>
+  </article>`
+).join("");
+
+$("#liste-secteurs").innerHTML = SECTEURS.map(
+  (s) => `<article class="fiche"><h3>${s.nom}</h3><ul>${s.besoins.map((b) => `<li>${b}</li>`).join("")}</ul></article>`
 ).join("");

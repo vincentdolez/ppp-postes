@@ -147,6 +147,17 @@ dl { margin: 0; font-size: .92rem; }
 dt { font-weight: 800; margin-top: .5rem; color: var(--orange); }
 dd { margin: 0; }
 
+/* Secteurs */
+.phrase { font-family: "Domine", Georgia, serif; font-size: 1.1rem; background: var(--nuit); color: var(--fond); padding: .8rem 1rem; border-radius: 10px; }
+.phrase b { color: var(--peche); }
+.phrase.exemple { background: var(--carte); color: var(--nuit); border: 1px solid var(--trait); }
+.phrase.exemple b { color: var(--orange); }
+.d8 { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: .4rem; padding-left: 1.6rem; font-weight: 700; }
+.d8 li::marker { color: var(--orange); font-weight: 800; }
+.vos-phrases { list-style: none; padding: 0; display: grid; gap: .6rem; }
+.vos-phrases li { background: var(--carte); border-left: 4px solid var(--orange); padding: .5rem .8rem; border-radius: 6px; }
+.vos-phrases .maillon { display: block; }
+
 footer { text-align: center; padding: 2rem 1rem 3rem; }
 footer a { color: var(--orange); font-weight: 800; }
 
