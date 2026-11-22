@@ -57,7 +57,7 @@ export const ANCRAGE_S3 = [
 
 export const PHRASE_S3 = {
   modele: ["Dans ", "[secteur]", ", pour ", "[besoin]", ", le ou la ", "[poste]", " doit savoir ", "[ce qu’il faut connaître du secteur]", ", sinon ", "[ce qui casse]", "."],
-  exemple: ["Dans ", "un festival", ", pour ", "le contrôle d’accès à l’entrée", ", l’", "admin systèmes", " doit savoir ", "qu’un champ avec 30 000 téléphones sature le réseau mobile", ", sinon ", "les scanners s’arrêtent dès que les portes ouvrent", "."],
+  exemple: ["Dans ", "un festival", ", pour ", "le contrôle d’accès à l’entrée", ", l’", "admin systèmes", " doit savoir ", "que 30 000 téléphones saturent le réseau mobile", ", sinon ", "les scanners s’arrêtent dès que les portes ouvrent", "."],
 };
 
 // Phrases des groupes, mises en ligne pendant la séance. Anonymes : ni nom ni prénom.
