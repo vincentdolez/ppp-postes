@@ -62,4 +62,6 @@ export const PHRASE_S3 = {
 
 // Phrases des groupes, mises en ligne pendant la séance. Anonymes : ni nom ni prénom.
 // { classe: "A" | "D", secteur, poste: id du poste, texte }
-export const PHRASES = [];
+export const PHRASES = [
+  { classe: "A", secteur: "Industrie", poste: "QA", texte: "Dans l’industrie, pour le logiciel ERP, le QA doit connaître l’ensemble des besoins utilisateurs, sinon ils utiliseront un système annexe." },
+];
