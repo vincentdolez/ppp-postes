@@ -62,4 +62,13 @@ export const PHRASE_S3 = {
 
 // Phrases des groupes, mises en ligne pendant la séance. Anonymes : ni nom ni prénom.
 // { classe: "A" | "D", secteur, poste: id du poste, texte }
-export const PHRASES = [];
+export const PHRASES = [
+  { classe: "A", secteur: "Santé", poste: "DEV", texte: "Dans la santé, pour soigner, le développeur doit savoir coder, sinon les gens meurent." },
+  { classe: "A", secteur: "Sport", poste: "CYB", texte: "Dans le sport, l’analyste cyber doit savoir comment les données des adhérents sont stockées et protégées pour éviter leur exposition." },
+  { classe: "A", secteur: "Banque, assurance", poste: "CYB", texte: "Dans les banques et assurances, pour protéger les données, l’analyste cybersécurité doit savoir repérer les failles de son système, sinon les données sensibles pourraient être volées." },
+  { classe: "A", secteur: "Éducation", poste: "OPS", texte: "Dans une école, pour que les élèves ne puissent pas accéder à des jeux/sites non adaptés à l’apprentissage sain, l’admin système doit savoir bloquer les mauvais sites." },
+  { classe: "A", secteur: "Jeu vidéo", poste: "OPS", texte: "Dans le jeu vidéo, pour contrôler l’afflux de joueurs, l’admin système doit savoir qu’à certains événements il peut y avoir une surcharge du serveur, sinon cela peut arrêter le système de multijoueur." },
+  { classe: "A", secteur: "Santé", poste: "DEV", texte: "Dans la santé, pour les logiciels des établissements de soins, le développeur doit savoir concevoir et maintenir ces logiciels, sinon cela provoque des difficultés pour le personnel et les patients." },
+  { classe: "A", secteur: "Agriculture", poste: "OPS", texte: "Dans l’agriculture, pour la croissance optimale du blé, l’admin système doit savoir organiser toutes les informations comme la température optimale de pousse et celle actuelle, sinon perte économique." },
+  { classe: "A", secteur: "Santé", poste: "SUP", texte: "Dans le secteur de la santé, le technicien de support doit aider un client à se connecter ou utiliser un outil si un client l’appelle, il le met en relation avec le service informatique de l’hôpital." },
+];
